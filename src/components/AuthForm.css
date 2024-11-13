@@ -1,20 +1,20 @@
 .auth-container {
     max-width: 400px;
-    margin: 0 auto; /* Center horizontally */
-    position: absolute; /* Center the container vertically and horizontally */
+    margin: 0 auto;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ffffff; /* White background */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 30px; /* Spacing inside the form */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
   }
   
   .auth-container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333333; /* Dark gray for readability */
+    color: #333333;
     font-size: 24px;
   }
   
@@ -24,39 +24,39 @@
   }
   
   .auth-container input {
-    margin-bottom: 15px; /* Spacing between form elements */
-    padding: 12px; /* Add padding inside inputs */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded input fields */
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px; 
     font-size: 16px;
-    outline: none; /* Remove default outline */
+    outline: none; 
     transition: border-color 0.3s ease-in-out;
   }
   
   .auth-container input:focus {
-    border-color: #0073e6; /* Change border color on focus for emphasis */
+    border-color: #0073e6; 
   }
   
   .auth-container button {
-    background-color: #0073e6; /* Primary button color */
-    color: #ffffff; /* White text */
-    padding: 12px; /* Padding inside the button */
+    background-color: #0073e6; 
+    color: #ffffff;
+    padding: 12px; 
     font-size: 16px;
     font-weight: bold;
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Rounded button */
+    border: none; 
+    border-radius: 8px; 
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
   
   .auth-container button:hover {
-    background-color: #005bb5; /* Darker shade of blue on hover */
+    background-color: #005bb5;
   }
   
   .auth-container p {
     text-align: center;
     margin-top: 15px;
-    color: #666666; /* Subtle gray for additional text */
+    color: #666666;
     font-size: 14px;
   }
   

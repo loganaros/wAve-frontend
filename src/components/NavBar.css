@@ -1,13 +1,11 @@
-/* NavBar.css */
-
 .NavBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    background: rgba(255, 255, 255, 0.1); 
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
     position: fixed;
     width: 100%;
     left: 50%;
@@ -25,7 +23,7 @@
 }
 
 .nav-link:hover {
-    color: #0073e6; /* Change to a blue color on hover */
+    color: #0073e6;
 }
 
 .nav-left {
@@ -46,7 +44,6 @@
     cursor: pointer;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .NavBar {
         flex-direction: column;

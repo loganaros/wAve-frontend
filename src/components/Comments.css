@@ -1,17 +1,15 @@
-/* Comments.css */
-
 .comments-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #ffffff; /* White background for contrast */
-    border-radius: 12px; /* Rounded edges for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .comments-list {
-    max-height: 300px; /* Limit the height for scrolling */
-    overflow-y: auto; /* Allow scrolling if comments exceed max-height */
-    margin-bottom: 20px; /* Space between the comments list and the form */
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin-bottom: 20px; 
 }
 
 .comment-form {
@@ -21,23 +19,23 @@
 }
 
 .comment-form textarea {
-    font-family: 'Arial', sans-serif; /* Change the font to Arial or your preferred font */
+    font-family: 'Arial', sans-serif; 
     padding: 10px;
-    border: 1px solid #ddd; /* Light border for consistency */
-    border-radius: 8px; /* Rounded corners for input fields */
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
     font-size: 14px;
-    outline: none; /* Remove default outline */
-    resize: none; /* Disable resizing */
+    outline: none; 
+    resize: none; 
     transition: border-color 0.3s ease-in-out;
 }
 
 .comment-form textarea:focus {
-    border-color: #0073e6; /* Highlight border color on focus */
+    border-color: #0073e6;
 }
 
 .comment-form button {
-    background-color: #0073e6; /* Blue button color */
-    color: #ffffff; /* White text for contrast */
+    background-color: #0073e6; 
+    color: #ffffff; 
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -49,11 +47,11 @@
 }
 
 .comment-form button:hover {
-    background-color: #005bb5; /* Darker blue on hover */
+    background-color: #005bb5; 
 }
 
 .comment-message {
-    color: #d9534f; /* Red color for error or warning messages */
+    color: #d9534f; 
     font-size: 14px;
     margin-top: 10px;
 }
