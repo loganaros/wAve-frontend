@@ -1,0 +1,74 @@
+.post-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 12px; /* Rounded edges for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+  }
+
+  .post-content {
+    margin: 0px;
+    padding-left: 20px;
+  }
+  
+  .post-content h4 {
+    color: #333333;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+  }
+  
+  .post-content p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0px;
+  }
+  
+  .post-audio-container {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7; /* Light gray background for audio controls */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  audio {
+    width: 100%;
+    outline: none; /* Remove the default outline */
+  }
+  
+  .post-footer {
+    display: flex;
+    justify-content: right;
+    padding: 15px;
+    border-top: 1px solid #f0f0f0;
+    background-color: #fafafa; /* Subtle gray footer background */
+  }
+  
+  .comment-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    background: none;
+    color: #0073e6; /* Blue color for interaction buttons */
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .comment-button:hover {
+    color: #005bb5; /* Darker blue on hover */
+  }
+  
+  .comment-button svg {
+    fill: #0073e6; /* Matching icon colors */
+    transition: fill 0.2s ease-in-out;
+  }
+  
+  .comment-button:hover svg {
+    fill: #005bb5; /* Darker icon color on hover */
+  }
+  

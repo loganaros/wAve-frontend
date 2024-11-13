@@ -1,0 +1,23 @@
+.feed-container {
+    height: 75vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide any unwanted overflow */
+}
+
+.posts-container {
+    flex: 1; /* Allow the posts container to take up the available height */
+    overflow-y: auto; /* Enable scrolling for posts */
+    padding: 75px 0 120px 17px; /* Horizontal padding for alignment and bottom padding for space for the NewPostForm */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+
+/* Loading and error messages styling */
+.loading-message,
+.error-message {
+    text-align: center;
+    margin: 20px 0;
+    color: #666666;
+    font-size: 16px;
+}

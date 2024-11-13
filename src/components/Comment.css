@@ -1,0 +1,27 @@
+/* Comment.css */
+
+.comment-container {
+    background-color: #f9f9f9; /* Light gray background for comment */
+    border-radius: 8px; /* Rounded corners for a smooth look */
+    padding: 10px; /* Padding inside the comment box */
+    margin-bottom: 10px; /* Spacing between comments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.comment-username {
+    font-weight: bold; /* Emphasize the username */
+    color: #333; /* Dark color for better readability */
+    margin-bottom: 5px; /* Space between username and comment text */
+}
+
+.comment-text {
+    font-size: 14px; /* Slightly smaller text for comments */
+    color: #555; /* Dark gray color for comment text */
+    margin-bottom: 5px; /* Space between comment text and timestamp */
+}
+
+.comment-created-at {
+    font-size: 12px; /* Smaller font for timestamp */
+    color: #999; /* Light gray for a subtle timestamp */
+    text-align: right; /* Align timestamp to the right */
+}
