@@ -7,10 +7,10 @@ const AuthForm = ({ type }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    username: type === 'register' ? '' : undefined, // Only used for registration
+    username: type === 'register' ? '' : undefined,
   });
   const [message, setMessage] = useState('');
-  const navigate = useNavigate(); // Import useNavigate for redirection
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,7 +22,7 @@ const AuthForm = ({ type }) => {
       const endpoint = type === 'register' ? '/api/register' : '/api/login';
       const response = await axios.post(`https://wave-app-portfolio-project-bd63556f6378.herokuapp.com${endpoint}`, formData);
       setMessage(type === 'register' ? `User registered: ${response.data.user.username}` : `Welcome back, ${response.data.user.username}`);
-      // Optionally store the token in local storage for future requests
+      // Store the token in local storage for future requests
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
       }

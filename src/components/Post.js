@@ -8,6 +8,7 @@ const Post = ({ username, postId, songId, caption }) => {
     const [error, setError] = useState(null);
     const [showComments, setShowComments] = useState(false);
 
+    // Get song data from API, don't need with iframe
     useEffect(() => {
         const fetchSongData = async () => {
             try {

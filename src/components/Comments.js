@@ -9,6 +9,7 @@ const Comments = ({ postId }) => {
   const [message, setMessage] = useState('');
   const token = localStorage.getItem('token');
 
+  // Get all comments from API
   useEffect(() => {
     const fetchComments = async () => {
       try {
@@ -25,6 +26,7 @@ const Comments = ({ postId }) => {
     setNewComment(e.target.value);
   };
 
+  // Submit a new comment
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     if (!token) {

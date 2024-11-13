@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './NewPostForm.css'; // Import the updated CSS
+import './NewPostForm.css';
 
 const NewPostForm = () => {
   const [formData, setFormData] = useState({
@@ -56,7 +56,7 @@ const NewPostForm = () => {
             params: {
               q: query,
               type: 'track',
-              limit: 5, // Limit the number of suggestions
+              limit: 5,
             },
           });
           setSearchResults(response.data.tracks.items);
@@ -82,11 +82,13 @@ const NewPostForm = () => {
     e.preventDefault();
     const token = localStorage.getItem('token');
 
+    // Check if user is logged in
     if (!token) {
       setMessage('You must be logged in to create a post');
       return;
     }
 
+    // Post new post to API
     try {
       const response = await axios.post(
         'https://wave-app-portfolio-project-bd63556f6378.herokuapp.com/api/posts',
@@ -126,6 +128,7 @@ const NewPostForm = () => {
           />
           {isFocused && searchResults.length > 0 && (
             <ul className="autocomplete-results">
+              {/* Autocomplete search */}
               {searchResults.map((song) => (
                 <li key={song.id} className="autocomplete-item" onMouseDown={() => handleSongSelect(song)}>
                   <div className="autocomplete-item-content">

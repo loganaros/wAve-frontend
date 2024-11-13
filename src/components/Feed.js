@@ -2,15 +2,17 @@ import NewPostForm from "./NewPostForm";
 import Post from "./Post";
 import { useState, useEffect } from "react";
 import axios from 'axios';
-import './Feed.css'; // Import the new CSS file
+import './Feed.css';
 
 function Feed() {
+    // Get token from local storage
     const token = localStorage.getItem('token');
 
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Get all posts from API
     useEffect(() => {
         const fetchPosts = async () => {
             try {
