@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Feed />} />
         <Route path="/login" element={<AuthForm type="login" />} />
         <Route path="/register" element={<AuthForm type="register" />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </Router>
   );
