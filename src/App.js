@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Feed from './components/Feed';
 import AuthForm from './components/AuthForm';
 import NavBar from './components/NavBar';
+import NotFound from './components/NotFound';
 
 function App() {
 
