@@ -29,7 +29,11 @@ const AuthForm = ({ type }) => {
       // Redirect to homepage after successful login or registration
       navigate('/');
     } catch (error) {
-      setMessage(error.response?.data?.error || `Error occurred: ${error}`);
+      if (error.response?.data?.errors) {
+        setMessage(error.response.data.errors.map(err => err.msg).join(', '));
+      } else {
+        setMessage(error.response?.data?.error || `Error occurred: ${error}`);
+      }
     }
   };
 
