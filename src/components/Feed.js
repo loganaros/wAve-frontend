@@ -43,13 +43,8 @@ function Feed() {
                     <p className="loading-message">No posts available</p>
                 ) : (
                     posts.map((post) => (
-                        <Post
-                            key={post.id}
-                            postId={post.id}
-                            username={post.username}
-                            songId={post.song_id}
-                            caption={post.caption}
-                        />
+                        // Render each post by passing only the postId
+                        <Post key={post.id} postId={post.id} />
                     ))
                 )}
             </div>
