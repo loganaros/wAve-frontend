@@ -8,7 +8,8 @@
 .posts-container {
     flex: 1; 
     overflow-y: auto;
-    padding: 75px 0 120px 17px;
+    padding: 0 0 50px 17px;
+    margin-top: 65px;
     box-sizing: border-box; 
 }
 

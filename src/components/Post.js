@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import './Post.css';
 import Comments from './Comments';
 
-const Post = () => {
-    const { id: postId } = useParams(); // Get the post ID from the URL
-    const [post, setPost] = useState(null);
+const Post = ({ username, postId, songId, caption }) => {
     const [song, setSong] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [showComments, setShowComments] = useState(false);
 
-    // Fetch post data from API
+    // Get song data from API, don't need with iframe
     useEffect(() => {
-        const fetchPostData = async () => {
+        const fetchSongData = async () => {
             try {
                 setError(null);
                 setLoading(true);
-                // Fetch the post data from the backend using postId
-                const postResponse = await fetch(`https://wave-app-portfolio-project-bd63556f6378.herokuapp.com/api/posts/${postId}`);
-                if (!postResponse.ok) {
-                    throw new Error(`Error: ${postResponse.status} ${postResponse.statusText}`);
+
+                const response = await fetch(`https://wave-app-portfolio-project-bd63556f6378.herokuapp.com/api/song/${songId}`);
+
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status} ${response.statusText}`);
                 }
-                const postData = await postResponse.json();
-                setPost(postData);
+
+                const data = await response.json();
+                setSong(data);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -31,35 +30,8 @@ const Post = () => {
             }
         };
 
-        fetchPostData();
-    }, [postId]);
-
-    // Fetch song data from API
-    useEffect(() => {
-        if (post && post.song_id) {
-            const fetchSongData = async () => {
-                try {
-                    setError(null);
-                    setLoading(true);
-
-                    const response = await fetch(`https://wave-app-portfolio-project-bd63556f6378.herokuapp.com/api/song/${post.song_id}`);
-
-                    if (!response.ok) {
-                        throw new Error(`Error: ${response.status} ${response.statusText}`);
-                    }
-
-                    const data = await response.json();
-                    setSong(data);
-                } catch (error) {
-                    setError(error.message);
-                } finally {
-                    setLoading(false);
-                }
-            };
-
-            fetchSongData();
-        }
-    }, [post]);
+        fetchSongData();
+    }, [songId]);
 
     const toggleComments = () => {
         setShowComments(!showComments);
@@ -70,25 +42,21 @@ const Post = () => {
 
     return (
         <div className="post-container">
-            {song && (
-                <div className="spotify-embed-container">
-                    <iframe
-                        src={`https://open.spotify.com/embed/track/${song.id}`}
-                        width="100%"
-                        height="80"
-                        frameBorder="0"
-                        allowtransparency="true"
-                        allow="encrypted-media"
-                    ></iframe>
-                </div>
-            )}
+            <div className="spotify-embed-container">
+                <iframe
+                    src={`https://open.spotify.com/embed/track/${song.id}`}
+                    width="100%"
+                    height="80"
+                    frameBorder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                ></iframe>
+            </div>
 
-            {post && (
-                <div className="post-content">
-                    <h4>@{post.username}</h4>
-                    <p>{post.caption}</p>
-                </div>
-            )}
+            <div className="post-content">
+                <h4>@{username}</h4>
+                <p>{caption}</p>
+            </div>
 
             <div className="post-footer">
                 <button className="comment-button" onClick={toggleComments}>

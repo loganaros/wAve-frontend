@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './NewPostForm.css';
+import { useNavigate } from 'react-router-dom';
 
 const NewPostForm = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const NewPostForm = () => {
   const [searchResults, setSearchResults] = useState([]); // State for Spotify search results
   const [accessToken, setAccessToken] = useState(''); // Store Spotify access token
   const [isFocused, setIsFocused] = useState(false); // State to track input focus
+  const navigate = useNavigate(); // Initialize navigate hook
 
   useEffect(() => {
     // Fetch Spotify access token from backend
@@ -106,6 +108,9 @@ const NewPostForm = () => {
         caption: '',
       });
       setQuery(''); // Clear the query after posting
+
+      // Redirect to the newly created post using navigate
+      navigate(`/posts/${response.data.id}`);
     } catch (error) {
       setMessage(error.response?.data?.error || 'Error creating post');
     }
