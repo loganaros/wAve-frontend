@@ -54,14 +54,12 @@ function App() {
 
     // Render the Post component with the fetched data
     return (
-      <div style="margin-top: 100px">
-        <Post
-          postId={post.id}
-          username={post.username}
-          songId={post.song_id}
-          caption={post.caption}
-        />
-      </div>
+      <Post
+        postId={post.id}
+        username={post.username}
+        songId={post.song_id}
+        caption={post.caption}
+      />
     );
   }
 
