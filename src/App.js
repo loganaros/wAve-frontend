@@ -54,12 +54,14 @@ function App() {
 
     // Render the Post component with the fetched data
     return (
-      <Post
-        postId={post.id}
-        username={post.username}
-        songId={post.song_id}
-        caption={post.caption}
-      />
+      <div className="single-post-wrapper">
+        <Post
+          postId={post.id}
+          username={post.username}
+          songId={post.song_id}
+          caption={post.caption}
+        />
+      </div>
     );
   }
 

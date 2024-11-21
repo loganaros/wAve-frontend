@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.single-post-wrapper {
+  padding-top: 100px; /* Adjust this value to match the height of the NavBar */
+  padding-left: 20px; /* Optional: add left padding for better spacing */
+  padding-right: 20px; /* Optional: add right padding for better spacing */
+  box-sizing: border-box;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
